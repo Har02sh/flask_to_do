@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/register.css')}}">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-card">
+          <!-- Register Form -->
+          <form class="form register-form">
+            <div id="formField">
+              <label>Name</label>
+              <input type="text" name="name" required>
+            </div>
+            <div id="formField">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div id="formField">
+              <label>Password</label>
+              <input type="password" name="password" required>
+            </div>
+            <div id="formField">
+              <label>Confirm Password</label>
+              <input type="password" name="confirmpassword" required>
+            </div>
+            <button>Register</button>
+            <p>Already a user? <a href="#" class="flip-to-login">Login</a></p>
+          </form>
+      
+          <!-- Login Form -->
+          <form class="form login-form">
+            <div id="formField">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div id="formField">
+              <label>Password</label>
+              <input type="password" name="password" required>
+            </div>
+            <button>Login</button>
+            <p>Don't have an account? <a href="#" class="flip-to-register">Register</a></p>
+          </form>
+        </div>
+      </div>      
+</body>
+<script src="{{url_for('static', filename='JS/register.js')}}"></script>
+</html>

@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+IN:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Dancing Script", serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    &::-webkit-scrollbar {
+        display: none; /* Hides scrollbar */
+    }
+}
+.main{
+    position: relative;
+    overflow: hidden;
+}
+.card{
+    transition: transform 0.5s ease, filter 0.5s ease;
+    width: 95vw;
+    height: 95vh;
+    margin-top: 2.5vh;
+    margin-left: 2.5vw;
+    border-radius: 20px;
+}
+
+
+/* CARD 1 */
+.card1{
+    background-color: #e2e2e2;
+    /* display: grid;
+    place-items: center; */
+}
+
+/* NAVBAR */
+#navbar{
+    height: 12%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    /* background-color: red; */
+    border-radius: 20px;
+}
+
+/* NAVBAR CONTENTS */
+#heading{
+    width: 15%;
+    font-size: 2rem;
+}
+#userDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: none;
+}
+#userPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid green 1.5px;
+    border-radius: 5px;
+    height: 50%;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+a{
+    color: green;
+    text-decoration: none;
+}
+#userCircle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid green 1.5px;
+    cursor: pointer;
+}
+
+#card1main{
+    height: 65%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#typewriterDiv{
+    font-size: 4rem;
+    /* color: blue; */
+}
+.cursor {
+    display: inline-block;
+    /* width: 2rem; Adjust width based on your font */
+    height: 4rem;
+    background: none;
+    border-left: 6px solid black;
+    animation: blink 0.6s step-end infinite;
+    margin-left: 5px;
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+#card1end{
+    height: 23%;
+    display: grid;
+    place-items: center;
+}
+
+#card1end button, #card2end button {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+
+  &:hover {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  &:active {
+    background-color: lightgreen;
+    border-color: #000000;
+    transform: scale(.96);
+  }
+  &:disabled {
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+}
+.card1 #circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+    animation: round 1s linear 0s infinite;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes round {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.card2{
+    margin-bottom: 2.5vh;
+    background-color: rgb(171, 209, 222);
+    position: relative;
+}
+#createTodoButton{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#createTodoButton button{
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+
+  &:hover{
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  &:active {
+    background-color: lightgreen;
+    border-color: #000000;
+    transform: scale(.96);
+  }
+}
+
+#todoData{
+    height:80%;
+    padding:10px;
+    position: relative;
+}
+#todoData table{
+    width: calc(100% - 20px);
+    /* border-bottom: 2px solid black; */
+    border-collapse: collapse;
+    background-color: transparent;
+    border-radius: 10px;
+    /* height: ca; */
+}
+tr{
+    border-bottom: 1px solid gray;
+    height: 3rem;
+    background-color: rgba(255,255,255,0.3);
+}
+tr:first-child th:first-child{
+    border-top-left-radius: 10px;  /* Rounded top-left corner */
+}
+tr:first-child th:last-child{
+    border-top-right-radius: 10px;
+}
+
+td{
+    text-align: center;
+}
+#card2end{
+    height: 10%;
+    display: grid;
+    place-items: center;
+}
+
+
+.todoForm{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: center;
+}
+.todoForm form{
+    height: 40%;
+    width: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+.todoForm form button{
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+
+  &:hover{
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  &:active {
+    background-color: lightgreen;
+    border-color: #000000;
+    transform: scale(.96);
+  }
+}
+#formField{
+    display: flex;
+    flex-direction: column;
+}
+.todoHeading{
+    text-align: center;
+    position: relative;
+}
+#cross{
+    position: absolute;
+    top:50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+#formField input{
+    width: 100%;
+    height: 40px;   
+    padding-left: 5px; 
+    font-size: 1.1rem;
+}
+#formField label{
+    font-weight: 600;
+}
+
+.delete-btn{
+    background-color: transparent;
+    width: fit-content;
+    border: none;
+    outline: none;
+}
+
+#logout{
+    position: absolute;
+    top: 6.5%;
+    right: calc(0.1% + 2.5vw);
+    width: 7rem;
+    height: 40px;
+    background-color: rgb(184, 180, 180);
+    border-radius: 10px;
+    display: none;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+#logout.show {
+    display: grid;
+}
+#logout:hover{
+    background-color: red;
+}

@@ -2,17 +2,13 @@ from flask import Flask, render_template, request, jsonify, session
 from extension import db
 from model import *
 from waitress import serve
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY")
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.secret_key = "your_secret_key"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///userDB.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
-
 with app.app_context():
     db.create_all()
 
@@ -72,6 +68,7 @@ def todo():
         todoName = data.get("todoName")
         due_date = data.get("due_date")
 
+        # Check if user exists
         user = User.query.filter_by(email=session.get("email")).first()
         if not user:
             return jsonify({"message": "User not found"}), 404

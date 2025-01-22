@@ -99,3 +99,14 @@ async function delete_todo(event){
         alert("Failed to delete the task. Please try again later.");
     }
 }
+
+document.querySelector("#logout").addEventListener("click",()=>{
+    fetch("/logout")
+    .then(response => response.json())
+    .then(result => {
+        if(result.message == "success"){
+            alert("You have been logged out!");
+            window.location.href = "/register";
+        }
+    })
+})

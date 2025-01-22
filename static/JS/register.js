@@ -61,9 +61,10 @@ formLogin.addEventListener("submit",async (event)=>{
     }
     const result = await response.json();
     if(response.ok){
+      document.querySelector(".overlay").style.display = "flex";
       setTimeout(()=>{
         window.location.href = "/dashboard";
-      },1000)
+      },2000)
     }
     console.log(result);
 })

@@ -1,3 +1,12 @@
+window.onload = function() {
+  if (window.location.pathname === '/dashboard') {
+      // If the cookie exists, display the element
+      document.querySelector('#card2').style.display = 'block';
+  } else{
+    document.querySelector('#card2').style.display = 'none';
+  }
+}
+
 // Select all card elements
 let cards = document.querySelectorAll('.card');
 let cardHeights = Array.from(cards).map(card => card.offsetHeight);

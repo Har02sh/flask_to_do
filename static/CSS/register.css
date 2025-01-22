@@ -10,10 +10,11 @@ body {
 }
 body {
   /* background-image:url(https://cdn.dribbble.com/users/472667/screenshots/14074439/media/64720654d52f9a50f9b2ffd1b9256b35.png?resize=1200x900&vertical=center) ; */
-  background-color: skyblue;
+  /* background-color: #007bff; */
+  background-image: url(https://colibriwp.com/blog/wp-content/uploads/2021/06/5243028.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,4 +113,42 @@ button {
   &:hover {
     background-color: lightgreen;
   }
+}
+
+
+/* LOADER */
+
+/* HTML: <div class="loader"></div> */
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side,#fff 94%,#000);
+  -webkit-background-clip:text;
+          background-clip:text;
+}
+
+@keyframes l24{
+  100%{background-position: left}
 }

@@ -58,7 +58,8 @@ def checkStatus():
 
 @app.route("/logout")
 def logout():
-    pass
+    session.clear()
+    return jsonify({"message":"Logout"})
 
 @app.route("/todo",methods=["GET","POST","DELETE"])
 def todo():
@@ -108,4 +109,5 @@ def todo():
 
 
 if __name__ == "__main__":
-    serve(app, host="0.0.0.0", port=5000)
+    # serve(app, host="0.0.0.0", port=5000)
+    app.run()

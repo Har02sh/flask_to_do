@@ -59,20 +59,6 @@ goUpButton.addEventListener('click', function() {
 });
 
 
-// window.onload = ()=>{
-//   fetch("/checkStatus")
-//   .then(response => response.json())
-//   .then(result => {
-//     console.log(result);
-//     console.log(result.user);
-//     username = result.user || "User";
-//     username = username.toUpperCase();
-//     sentence = `Hello ${username}`;
-//     typewriter(); 
-//   })
-//   .catch(err => console.log(err))
-// }
-
 
 let sentence, username;
 let cursorSpan = document.createElement("span");

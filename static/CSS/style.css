@@ -349,7 +349,7 @@ td{
 
 #logout{
     position: fixed;
-    top: 9%;
+    top: 14%;
     right: calc(0.1% + 2.5vw);
     width: 7rem;
     height: 40px;

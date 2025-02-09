@@ -348,7 +348,7 @@ td{
 }
 
 #logout{
-    position: absolute;
+    position: fixed;
     top: 6.5%;
     right: calc(0.1% + 2.5vw);
     width: 7rem;
